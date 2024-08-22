@@ -7,12 +7,12 @@ function App() {
   return (
     <div className={style.App}>
       <header>
-        <Link to='/'>Shop</Link>
-        <Link to='/shoppingCart'>Shopping Cart</Link>
+        <Link to='/app-shop-lesson/'>Shop</Link>
+        <Link to='/app-shop-lesson/shoppingCart'>Shopping Cart</Link>
       </header>
       <Routes>
-        <Route path='/*' element={<Shop />} />
-        <Route path='/shoppingCart' element={<ShoppingCart />} />
+        <Route path='/app-shop-lesson/*' element={<Shop />} />
+        <Route path='app-shop-lesson/shoppingCart' element={<ShoppingCart />} />
       </Routes>
     </div>
   );

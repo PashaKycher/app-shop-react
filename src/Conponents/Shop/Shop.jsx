@@ -10,16 +10,16 @@ export default function Shop() {
     <div className={style.Shop}>
       <nav>
         <h3>Categories:</h3>
-        <Link to='/electronics'>Electronics</Link>
-        <Link to='/jewelery'>Jewelery</Link>
-        <Link to="/men's clothing">Men's clothing</Link>
-        <Link to="/women's clothing">Women's clothing</Link>
+        <Link to='/app-shop-lesson/electronics'>Electronics</Link>
+        <Link to='/app-shop-lesson/jewelery'>Jewelery</Link>
+        <Link to="/app-shop-lesson/men's clothing">Men's clothing</Link>
+        <Link to="/app-shop-lesson/women's clothing">Women's clothing</Link>
       </nav>
       <div className={style.ShopProducts}>
         <Routes>
-          <Route path='/' element={<Products />} />
-          <Route path='/:category' element={<Products/>}/>
-          <Route path='/products/:productId' element={<ProductInfo />} />
+          <Route path='/app-shop-lesson/' element={<Products />} />
+          <Route path='app-shop-lesson/:category' element={<Products/>}/>
+          <Route path='app-shop-lesson/products/:productId' element={<ProductInfo />} />
         </Routes>
       </div>
     </div>
