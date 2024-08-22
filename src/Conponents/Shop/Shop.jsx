@@ -17,9 +17,9 @@ export default function Shop() {
       </nav>
       <div className={style.ShopProducts}>
         <Routes>
-          <Route path='/app-shop-react/' element={<Products />} />
-          <Route path='app-shop-react/:category' element={<Products/>}/>
-          <Route path='app-shop-react/products/:productId' element={<ProductInfo />} />
+          <Route path='/' element={<Products />} />
+          <Route path='/:category' element={<Products/>}/>
+          <Route path='/products/:productId' element={<ProductInfo />} />
         </Routes>
       </div>
     </div>

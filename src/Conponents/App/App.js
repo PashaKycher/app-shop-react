@@ -11,7 +11,7 @@ function App() {
         <Link to='/app-shop-react/shoppingCart'>Shopping Cart</Link>
       </header>
       <Routes>
-        <Route path='/app-shop-react/*' element={<Shop />} />
+        <Route path='app-shop-react/*' element={<Shop />} />
         <Route path='app-shop-react/shoppingCart' element={<ShoppingCart />} />
       </Routes>
     </div>
