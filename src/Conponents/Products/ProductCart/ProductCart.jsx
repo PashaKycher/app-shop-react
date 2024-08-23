@@ -9,7 +9,7 @@ export default function ProductCart({ product }) {
   let dispatch = useDispatch();
 
   const ShowMoreHandler = () => {
-    navigate(`/products/${product.id}`);
+    navigate(`/app-shop-react/products/${product.id}`);
   };
 
   const AddProductToCartHandler = () => {
