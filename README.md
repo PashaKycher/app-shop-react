@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Shop (React) - README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+English README for the Shop React project.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This is a small React single-page application for a shop. The app uses React Router for navigation and Redux Toolkit for application state. Styling is handled with SCSS modules. The project was created with Create React App and is configured to be deployable to GitHub Pages.
 
-### `npm start`
+## Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18
+- React Router v6
+- Redux Toolkit
+- React Redux
+- SCSS (Sass) with CSS Modules
+- Axios (for potential HTTP requests)
+- Create React App (react-scripts)
+- gh-pages (dev dependency for GitHub Pages deploy)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project structure
 
-### `npm test`
+Key files and folders:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `public/` - static html and manifest files.
+- `src/index.js` - application entry, wraps App with Redux Provider and BrowserRouter.
+- `src/Conponents/App/` - main App component and styles.
+- `src/Shop/` - Shop page components.
+- `src/Products/` - Product listing and product card components.
+- `src/ShoppingCart/` - Shopping cart page and product-in-cart components.
+- `src/data/` - Redux reducers and `store.js` (configures the Redux store).
 
-### `npm run build`
+Important Redux slices (from `src/data`):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `shopReducers` - shop data (products, categories, etc.)
+- `shoppingInfoReeducer` - purchase or user info (note: file has a misspelled name in the repo)
+- `shoppingCartReducer` - manages items added to the cart
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Routing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+App routes are defined in `src/Conponents/App/App.js` using React Router v6. The base path includes `app-shop-react` (matching the repository homepage) and maps:
 
-### `npm run eject`
+- `/app-shop-react/` -> Shop page
+- `/app-shop-react/shoppingCart` -> Shopping Cart page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you host the app on GitHub Pages under a repository named `app-shop-react`, these paths will work correctly. If you host under a different path, adjust the `homepage` in `package.json` and the route paths accordingly.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Available scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+From the project root, use npm to run these scripts (see `package.json`):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start` - Start development server (Create React App)
+- `npm test` - Run tests
+- `npm run build` - Create production build
+- `npm run deploy` - Build and deploy to GitHub Pages (uses `gh-pages`)
 
-## Learn More
+Example (Windows PowerShell):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```powershell
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup and running locally
 
-### Code Splitting
+1. Clone the repository.
+2. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```powershell
+npm install
+```
 
-### Analyzing the Bundle Size
+3. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```powershell
+npm start
+```
 
-### Making a Progressive Web App
+4. Open `http://localhost:3000/app-shop-react/` in your browser (if a different homepage is used, you may need to use `/`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add a license file if you plan to open-source the repository.
